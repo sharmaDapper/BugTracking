@@ -1,0 +1,24 @@
+.container-fluid{
+//    / background-color: lightcyan;
+    height: calc(100% - 120px);
+    overflow: auto;
+    padding:0px;
+    .jumbotron{
+        width:100%;
+        padding: 10px;
+        h1{
+            font-size: 1.25rem;
+            margin-top: 0.25em;
+        }
+        .badge{
+            vertical-align:middle;
+            margin-top: 0.5em;
+        }
+    }
+    .container{
+        min-width: 80%;
+        .card{
+            border-width: 5px;
+        }   
+    }
+}

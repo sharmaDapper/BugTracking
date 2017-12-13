@@ -1,0 +1,22 @@
+@import '../../../styles.scss';
+nav{
+    background-color : $bugColor;
+    min-height: 60px;
+    ul{
+        li >a{
+            color: $linkColor;
+        }
+       
+    }
+    .user-settings{
+        span{
+            padding:0px 10px;
+            font-size:1.75rem
+        }
+        .user-image{
+            width: 40px;
+        }
+    }
+   
+    
+}

@@ -1,0 +1,26 @@
+<div class="login-container">
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <form class="text-center login-form" (submit)="loginUser()">
+        <h3>Please Login</h3>
+        <div class="input-group">
+          <span class="input-group-addon fa fa-user" id="username"></span>
+          <input type="text" class="form-control" placeholder="Username" aria-describedby="username" ([ngModel])="username" required>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon fa fa-key" id="pass"></span>
+          <input type="password" class="form-control" placeholder="Password" aria-describedby="pass"  ([ngModel])="password" required>
+        </div>
+        <div class="pl-1">
+          <label class="custom-control custom-checkbox float-left ">
+            <input type="checkbox" class="custom-control-input" ([ngModel])="rememberMe">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Remember Me</span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
