@@ -1,3 +1,4 @@
+import { ApiService } from './services/api.services';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +12,9 @@ import { ContentHeaderComponent } from './components/content/content-header/cont
 import { ContentListComponent } from './components/content/content-list/content-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './components/login/login.component';
+import { EditBugComponent } from './components/edit-bug/edit-bug.component';
+import { QuillModule } from 'ngx-quill'
+
 
 
 @NgModule({
@@ -21,15 +25,17 @@ import { AuthGuard } from './components/login/login.component';
     FooterComponent,
     ContentHeaderComponent,
     ContentListComponent,
-    LoginComponent
+    LoginComponent,
+    EditBugComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    QuillModule
   ],
   providers: [AuthGuard,
-    AuthenticationService],
+    AuthenticationService,ApiService],
   bootstrap: [AppComponent]
 })
 export class BugTrackerModule { }

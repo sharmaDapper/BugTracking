@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ApiService } from './../../../services/api.services';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'content-list',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-
-  constructor() { }
+  @Input() bugList: any;
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
+
   }
 
 }

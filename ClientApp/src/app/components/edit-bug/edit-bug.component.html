@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="card card-outline-success">
+          <div class="card-header alert-success">
+            <div class="col-sm-12">
+              <h4><span class="fa fa-bug"></span> ID: {{bugId}}</h4>
+            </div>
+          </div>
+          <div class="row  editor">
+            <div class="col-sm-12">
+              <quill-editor [modules]="toolBarConfig"></quill-editor>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <label><span class="fa fa-hourglass-half"></span> Status</label>
+              <select class="form-control">
+                    <option value="New">New</option>
+                    <option value="InProgress">In Progress</option>
+                    <option value="Closed">Closed</option>
+                  </select>
+            </div>
+            <div class="col-sm-4 ">
+              <label><span class="fa fa-exclamation"></span> Priority</label>
+              <select class="form-control">
+                      <option value="Low">Low</option>
+                      <option value="Medium">Medium</option>
+                      <option value="High">High</option>
+                    </select>
+            </div>
+            <div class="col-sm-4">
+              <label><span class="fa fa-user"></span> Assigned To</label>
+              <select class="form-control">
+                        <option value="New">New</option>
+                      </select>
+            </div>
+          </div>
+          <div class="row list-group" style="padding:10px;" >
+            <div class="col-sm-12 card-header" style="border: 1px solid rgba(0,0,0,.125);">
+              <h4><span class="fa fa-link"></span>Attachments</h4>
+            </div>
+            <div class="col-sm-12 row list-group-item" *ngFor="let x of [1,2,3,4,5]">
+              <div class="col-sm-3 ">
+                File {{x}}
+              </div>
+              <div class="col-sm-9">
+                File Description
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

@@ -1,69 +1,44 @@
 <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <div class="col-sm-12 col-lg-6">
-        shgfsajhfs
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        Details
-      </div>
-
+    <li class="list-group-item row text-center">
+        <div class="col-sm-12 col-lg-6">
+            Title
+        </div>
+        <div class="col-sm-12 col-lg-6 row">
+            <div class="col-sm-3">
+                Date
+            </div>
+            <div class="col-sm-3">
+                Priority
+            </div>
+            <div class="col-sm-2">
+                Status
+            </div>
+            <div class="col-sm-4">
+                Assigned To
+            </div>
+        </div>
     </li>
+    <li class="list-group-item row" *ngFor="let bug of bugList">
+        <a [routerLink] = "['/bugs',bug.id]" class="col-sm-12 row">
+            <div class="col-sm-12 col-lg-6">
+                [{{bug.id}}] : {{bug.title}}
+            </div>
+            <div class="col-sm-12 col-lg-6 row text-center">
+                <div class="col-sm-3">
+                    {{bug.createdDate | date: 'dd/MM/yyyy'}}
+                </div>
+                <div class="col-sm-3">
+                    {{bug.priority}}
+                </div>
+                <div class="col-sm-2">
+                    {{bug.status}}
+                </div>
+                <div class="col-sm-4">
+                    {{bug.assignedTo}}
+                </div>
 
-    <li class="list-group-item row">
-      <div class="col-sm-12 col-lg-6">
-        shgfsajhfs
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        Details
-      </div>
 
+            </div>
+        </a>
     </li>
-    <li class="list-group-item row">
-      <div class="col-sm-12 col-lg-6">
-        shgfsajhfs
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        Details
-      </div>
-
-    </li>
-    <li class="list-group-item row">
-      <div class="col-sm-12 col-lg-6">
-        shgfsajhfs
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        Details
-      </div>
-
-    </li>
-    <li class="list-group-item row">
-      <div class="col-sm-12 col-lg-6">
-        shgfsajhfs
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        Details
-      </div>
-
-    </li>
-    <li class="list-group-item row">
-      <div class="col-sm-12 col-lg-6">
-        shgfsajhfs
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        Details
-      </div>
-
-    </li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
+</ul>

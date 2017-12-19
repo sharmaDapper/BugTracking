@@ -1,3 +1,4 @@
+import { EditBugComponent } from './../components/edit-bug/edit-bug.component';
 import { RouterModule, Routes }  from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -10,9 +11,11 @@ import { ContentListComponent } from '../components/content/content-list/content
 import { LoginComponent } from '../components/login/login.component';
 import {AuthGuard} from '../components/login/login.component';
 
+
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
-    { path: 'home', component: ContentComponent ,canActivate: [AuthGuard]},
+    { path: 'bugs', component: ContentComponent ,canActivate: [AuthGuard]  },
+    { path: 'bugs/:id', component: EditBugComponent },
     { path: '',   redirectTo: '/login', pathMatch: 'full' }
     //{ path: '**', component: PageNotFoundComponent }
   ];
