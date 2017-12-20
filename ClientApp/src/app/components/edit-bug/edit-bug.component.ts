@@ -28,9 +28,23 @@ export class EditBugComponent implements OnInit {
     this.api.getBugById(this.bugId).subscribe(
       (data)=>{
         this.bugDetails = data;
+        
       },
       (error)=>{
         console.log(error);
+      }
+    )
+  }
+
+  updateBug(){
+    this.api.updateBug(this.bugDetails).subscribe(
+      (data)=>{
+        this.bugDetails = data;
+        alert("Updated Successfully");
+      },
+      (error)=>{
+        console.log(error);
+        alert("Error Occured");
       }
     )
   }

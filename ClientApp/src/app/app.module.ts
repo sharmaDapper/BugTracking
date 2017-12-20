@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './components/login/login.component';
 import { EditBugComponent } from './components/edit-bug/edit-bug.component';
 import { QuillModule } from 'ngx-quill'
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -30,6 +31,7 @@ import { QuillModule } from 'ngx-quill'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     QuillModule
