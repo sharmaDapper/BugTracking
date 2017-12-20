@@ -12,6 +12,7 @@ export class EditBugComponent implements OnInit {
   sub: any;
   bugDetails: any;
   toolBarConfig: any;
+  comment : string;
   constructor(private route: ActivatedRoute,private api: ApiService) {
     this.toolBarConfig = { toolbar: [ [ 'bold', 'italic', { list: 'ordered' }, { list: 'bullet' } ] ] };
    }
@@ -47,6 +48,17 @@ export class EditBugComponent implements OnInit {
         alert("Error Occured");
       }
     )
+  }
+
+  addComment(){
+    let comment  = {
+      description:this.comment,
+      commentBy:"Manish Kumar",
+      dateTime:new Date()
+    }
+    this.bugDetails.comments?this.bugDetails.comments.push(comment):this.bugDetails.comments=[comment];
+    this.updateBug();
+    this.comment = null;
   }
 
 }

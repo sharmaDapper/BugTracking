@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
   //       this.loading = false;
   //     });
   // }
-    this.router.navigate(['/home']);
+    this.authenticationService.loggedInUser = this.username;
+    this.router.navigate(['/bugs']);
   }
 ngOnInit() {
   this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -58,7 +59,7 @@ export class AuthGuard implements CanActivate {
         }
  
         // not logged in so redirect to login page with the return url and return false
-        this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
+        this.router.navigate(['/bugs'], { queryParams: { returnUrl: state.url }});
         return false;
     }
 }
